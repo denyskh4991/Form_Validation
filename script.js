@@ -18,3 +18,27 @@ function validateName() {
     nameError.innerHTML = '<i class="fa-solid fa-circle-check"></i>';
     return true;
 }
+
+function validatePhone() {
+    let phone = document.getElementById('contact-phone').value;
+
+    phoneError.innerHTML = '';
+
+    if (phone.length === 0) {
+        phoneError.innerHTML = 'Phone no is required';
+        return false;
+    }
+
+    if (!phone.match(/^[0-9]+$/)) {
+        phoneError.innerHTML = 'Only digits, please';
+        return false;
+    }
+
+    if (phone.length !== 11) {
+        phoneError.innerHTML = 'Phone number should be 11 digits';
+        return false;
+    }
+
+    phoneError.innerHTML = '<i class="fa-solid fa-circle-check"></i>';
+    return true;
+}
