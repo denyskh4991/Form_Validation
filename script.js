@@ -59,3 +59,17 @@ function validateEmail() {
     emailError.innerHTML = '<i class="fa-solid fa-circle-check"></i>';
     return true;
 }
+
+function validateMessage() {
+    let message = document.getElementById('contact-message').value;
+    let required = 30;
+    let left = required - message.length;
+
+    if (left > 0) {
+        messageError.innerHTML = left + ' more characters required';
+        return false;
+    }
+
+    messageError.innerHTML = '<i class="fa-solid fa-circle-check"></i>';
+    return true;
+}
