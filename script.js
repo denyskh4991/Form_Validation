@@ -25,7 +25,7 @@ function validatePhone() {
     phoneError.innerHTML = '';
 
     if (phone.length === 0) {
-        phoneError.innerHTML = 'Phone no is required';
+        phoneError.innerHTML = 'Phone is required';
         return false;
     }
 
@@ -40,5 +40,22 @@ function validatePhone() {
     }
 
     phoneError.innerHTML = '<i class="fa-solid fa-circle-check"></i>';
+    return true;
+}
+
+function validateEmail() {
+    let email = document.getElementById('contact-email').value;
+
+    if (email.length === 0) {
+        emailError.innerHTML = 'Email is required';
+        return false;
+    }
+
+    if (!email.match(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/)) {
+        emailError.innerHTML = 'Email invalid';
+        return false;
+    }
+
+    emailError.innerHTML = '<i class="fa-solid fa-circle-check"></i>';
     return true;
 }
