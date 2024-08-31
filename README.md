@@ -5,7 +5,7 @@
 
 <h2>Key Features</h2>
 <h3>Form Validation</h3>
-<p>The form includes four input fields—Full Name, Phone Number, Email, and Message. Each field is validated as the user types, providing immediate feedback.</p>
+<p>The form includes four input fields — Full Name, Phone Number, Email, and Message. Each field is validated as the user types, providing immediate feedback.</p>
 
 <h3>Real-Time Error Messages</h3>
 <p>If an input does not meet the required criteria (e.g., a name isn't in the correct format or the phone number doesn't contain 11 digits), an error message is displayed below the input field. Valid inputs are confirmed with a checkmark icon.</p>
